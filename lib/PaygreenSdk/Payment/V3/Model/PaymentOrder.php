@@ -105,6 +105,11 @@ class PaymentOrder implements PaymentOrderInterface
     private $metadata;
 
     /**
+     * @var int
+     */
+    private $ttl;
+
+    /**
      * @return string
      */
     public function getId()
@@ -512,5 +517,21 @@ class PaymentOrder implements PaymentOrderInterface
         $this->cancelUrl = $cancelUrl;
 
         return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTtl()
+    {
+        return $this->ttl;
+    }
+
+    /**
+     * @param int $ttl
+     */
+    public function setTtl($ttl)
+    {
+        $this->ttl = $ttl;
     }
 }
