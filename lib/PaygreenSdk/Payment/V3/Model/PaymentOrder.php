@@ -107,7 +107,7 @@ class PaymentOrder implements PaymentOrderInterface
     /**
      * @var int
      */
-    private $ttl;
+    private $ttl = 600;
 
     /**
      * @return string
